@@ -27,12 +27,21 @@
         <span class="search others-search">
             <i class="fas fa-search"></i>
         </span>
-        <div>
+        <div class="ham-burger">
             <span class="line1"></span>
             <span class="line2"></span>
             <span class="line3"></span>
         </div>
     </header>
+
+    <nav class="ham-nav">
+        <ul>
+            <li><a href="product.html">Unisex</a></li>
+            <li><a href="product.html">Kids</a></li>
+            <li><a href="product.html">Outlets</a></li>
+        </ul>
+    </nav>
+
 
     <main>
         <section class="product-upper-part">
@@ -44,7 +53,7 @@
                         <i class="fas fa-search"></i>
                     </span>
                 </span>
-                <p>Handlevogn</p>
+                <h6>Shopping cart</h6>
             </div>
             <div>
                 <figure class="first-figure">
@@ -58,6 +67,7 @@
             </div>
         </section>
 
+
         <section class="product-lower-part">
             <h5>Om skoen</h5>
             <span class="dot-p">
@@ -67,7 +77,7 @@
             <p>Sko storrelser</p>
             <div class="size-checkout">
                 <div class="product-sizes">
-                    <span>38</span>
+                    <span class="border">38</span>
                     <span>39</span>
                     <span>40</span>
                     <span>41</span>
@@ -89,6 +99,26 @@
     <footer>
         <p>Wihib Fure</p>
     </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sizeSpans = document.querySelectorAll(".product-sizes span");
+
+            sizeSpans.forEach(function (span) {
+                span.addEventListener("click", function () {
+                    sizeSpans.forEach(function (otherSpan) {
+                        otherSpan.classList.remove("border");
+                    });
+
+                    this.classList.add("border");
+                });
+            });
+            sizeSpans[0].classList.add("border");
+        });
+    </script>
+
+    <script src="../js/script.js"></script>
 
 </body>
 
