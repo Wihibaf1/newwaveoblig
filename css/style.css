@@ -1,24 +1,21 @@
 * {
     box-sizing: border-box;
-}
-* {
     margin: 0px;
     padding: 0px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-/*Jeg oppretter en grid-container og gir den navnet grid-container
-danner en rutenett under!*/
+
 #grid-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:"topp" 
-                        "hovedomraade" 
-                        "sidebar"         
-                        "baann"; 
+    grid-template-areas:
+        "topp"
+        "hovedomraade"
+        "sidebar"
+        "baann";
 }
+
 html,
 body {
     height: 100%;
@@ -26,39 +23,14 @@ body {
     position: relative;
 }
 
-/* Header  */
 header {
     grid-area: topp;
-}
-
-
-main {
-    grid-area: hovedomraade;
-}
-
-
-aside {
-    grid-area: sidebar;
-}
-
-
-footer {
-    grid-area: baann;
-}
-
-
-#logo {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: #000;
-}
-
-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding: 14px;
 }
+
 #logo {
     text-decoration: none;
     font-size: 18px;
@@ -72,40 +44,23 @@ header nav ul {
     list-style: none;
 }
 
-
 .default-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-
 .default-flex h2 {
     flex-basis: 100%;
 }
-
 
 .default-flex article {
     flex-basis: 33%;
     min-width: 300px;
 }
 
-
 .default-flex article img {
     width: 100%;
-}      
-header {
-    padding: 14px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 10px;
 }
 
 header h6 {
@@ -119,16 +74,8 @@ header h6 a {
 }
 
 header .search {
-    border: 1px solid #D9D9D8;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    border: 1px solid #D9D9D8;
     padding: 20px;
 }
 
@@ -141,18 +88,7 @@ header .search i {
 }
 
 header div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -185,7 +121,6 @@ header .others-search {
         display: none;
     }
 }
-
 
 /* ham nav  */
 
@@ -240,7 +175,6 @@ header .others-search {
     text-decoration: none;
     color: inherit;
 }
-
 
 /* Index upper Part  */
 
@@ -376,7 +310,6 @@ header .others-search {
     }
 }
 
-
 /* Nav Bar  */
 
 .index-nav {
@@ -433,7 +366,6 @@ header .others-search {
         color: inherit;
     }
 }
-
 
 /* Index Lower Part  */
 
@@ -515,7 +447,6 @@ header .others-search {
         width: 250px;
     }
 }
-
 
 /* Product Page  */
 
@@ -623,7 +554,6 @@ header .others-search {
     margin-top: 50px;
 }
 
-
 /* Product Upper Part Responsiveness  */
 
 @media (min-width: 1024px) {
@@ -715,7 +645,6 @@ header .others-search {
     }
 
 }
-
 
 /* Lower Part  */
 
@@ -845,7 +774,6 @@ header .others-search {
         gap: 15px;
     }
 
-
     .product-lower-part .continue a {
         padding: 7px 7px;
         width: 17vw;
@@ -854,7 +782,6 @@ header .others-search {
         font-weight: 300;
     }
 }
-
 
 /* Checkout  */
 
@@ -899,7 +826,6 @@ header .others-search {
     font-weight: 400;
     margin-left: 26px;
 }
-
 
 @media (min-width: 1024px) {
 
@@ -1124,7 +1050,6 @@ header .others-search {
     }
 
 }
-
 
 /* Footer  */
 
